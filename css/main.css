@@ -1,0 +1,153 @@
+/* Start Global Code */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+/* End Global Code */
+/* Start Cards */
+.card {
+    overflow: hidden;
+    background-color: #FFF;
+    width: 400px;
+    height: 550px;
+    margin-top: 90px;
+    box-shadow: 1px 3px 3px 0px #EEE , -3px -1px 3px 0px #EEE;
+    position: relative;
+}
+.card .overlay {
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #46a395;
+    opacity: .7;
+    left: -400px;
+    transition: .4s;
+    top: 0;
+    z-index: 1;
+}
+.card .overlay a {
+    text-decoration: none;
+    color: #FFF;
+    border: 2px solid #fff;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card .icons {
+    z-index: 2;
+    position: absolute;
+    color: #FFF;
+    font-size: 25px;
+    top: 240px;
+    right: 10px;
+}
+.card .icons i {
+    cursor: pointer;
+}
+.card img {
+    width: 400px;
+    height: 280px;
+    cursor: pointer;
+}
+.card img:hover + .overlay {
+    left: 0;
+}
+.card .overlay:hover {
+    left: 0;
+}
+.card .icons:hover + .overlay {
+    left: 0;
+}
+.card .inner {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.card .inner h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.card .inner p {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.card .inner .features {
+    display: flex;
+}
+.card .inner .features > div {
+    margin: 20px;
+    margin-left: 0px;
+}
+.card .inner .features > div h4 {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.card .inner .features .icon {
+    display: flex;
+}
+.card .inner .features .icon i {
+    color: #b3b3b3;
+    font-size: 25px;
+    margin: 5px 10px 5px 0px;
+}
+.card .inner .features .icon span {
+    display: block;
+    font-weight: bold;
+    margin: 10px 10px 10px 0px;
+}
+.card .inner .features .icon p {
+    margin: 10px 10px 10px 0px;
+    font-size: 14px;
+}
+.card .inner .sale {
+    margin: 0px 10px 10px 0px;
+}
+.card .inner .sale h4 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.card .inner .sale span {
+    font-size: 22px;
+    color: #1eaec4;
+}
+.one::after , .two::after {
+    content: "Hot";
+    background-color: #dd3333;
+    position: absolute;
+    top: 240px;
+    left: 10px;
+    color: white;
+    padding: 5px 8px;
+}
+.before {
+    background-color: #ea723d;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 5px;
+    color: #FFF;
+}
+.before::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    border: 15px solid;
+    border-color: transparent transparent transparent #ea723d;
+    position: absolute;
+    top: -1px;
+    right: -30px;
+}
+/* End Cards */
